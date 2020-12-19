@@ -1,0 +1,36 @@
+.contact-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  color: white;
+
+  h2 {
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+    margin-bottom: 1rem;
+  }
+
+  .link {
+    transition: .3s;
+    cursor: pointer;
+    i {
+      transition: .3s;
+    }
+    &:hover {
+      opacity: .5;
+      i {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

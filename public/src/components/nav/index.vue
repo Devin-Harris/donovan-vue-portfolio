@@ -1,6 +1,6 @@
 <template>
   <div class="nav-container">
-    <h2 class="name-link">// Donovan Staab</h2>
+    <h2 class="name-link" @click="linkClick(links[0])">// Donovan Staab</h2>
     <i
       class="fas fa-plus hamburger"
       @click="toggleLinks"
@@ -9,7 +9,9 @@
     <div v-if="isLinksOpen">
       <div class="link-container" v-for="link in links" :key="link.name">
         <h2 class="link-container__link" @click.stop="linkClick(link)">
-          <span>{{ link.isActive ? "//" : "+" }}</span> {{ link.name }}
+          <span v-if="link.isActive">//</span>
+          <i v-else class="fas fa-plus"></i>
+          {{ link.name }}
         </h2>
         <div v-if="link.subLinksOpen">
           <h2
@@ -18,7 +20,9 @@
             :key="subLink.name"
             @click.stop="subLinkClick(subLink)"
           >
-            <span>{{ subLink.isActive ? "//" : "+" }}</span> {{ subLink.name }}
+            <span v-if="subLink.isActive">//</span>
+            <i v-else class="fas fa-plus"></i>
+            {{ subLink.name }}
           </h2>
         </div>
       </div>

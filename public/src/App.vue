@@ -41,5 +41,6 @@ html {
 .content {
   display: grid;
   grid-template-columns: max-content auto;
+  justify-items: center;
 }
 </style>

@@ -35,5 +35,19 @@
       padding-left: 1rem;
       color: $light;
     }
+    &__link, &__sub-link {
+      transition: .3s;
+      cursor: pointer;
+      i {
+        transition: .3s;
+        font-size: 1rem;
+      }
+      &:hover {
+        opacity: .5;
+        i {
+          transform: rotate(45deg);
+        }
+      }
+    }
   }
 }

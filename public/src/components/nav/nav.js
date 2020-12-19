@@ -52,7 +52,7 @@ export default {
           subLinksOpen: false
         },
       ],
-      isLinksOpen: false
+      isLinksOpen: true
     }
   },
   methods: {
