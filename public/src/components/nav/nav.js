@@ -75,12 +75,13 @@ export default {
       if (link.redirects) this.$router.push(link.name)
     },
     linkClick(link) {
-      this.links.map(l => { l.subLinksOpen = false })
       this.deactiveAllLinks()
       this.links.map(l => {
         if (l.name === link.name) {
           l.isActive = true
           l.subLinksOpen = !l.subLinksOpen
+        } else {
+          l.subLinksOpen = false
         }
         return l
       })
