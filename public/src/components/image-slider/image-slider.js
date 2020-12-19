@@ -29,16 +29,19 @@ export default {
         this.loadNewImage()
       }, 4000)
     },
+    getImageSrc(image) {
+      return require(`../../assets/images/${this.imageBaseSrc}/${image}`)
+    },
     loadNewImage() {
-      setTimeout(() => {
-        document.querySelector('.image-slider-container').style.opacity = 1
-      }, 150)
+      // setTimeout(() => {
+      //   document.querySelector('.image-slider-container').style.opacity = 1
+      // }, 150)
       this.activeImageIndex += 1
       if (this.activeImageIndex >= this.images.length) this.activeImageIndex = 0
 
-      setTimeout(() => {
-        document.querySelector('.image-slider-container').style.opacity = 0
-      }, 3850)
+      // setTimeout(() => {
+      //   document.querySelector('.image-slider-container').style.opacity = 0
+      // }, 3850)
     },
     prevImage() {
       clearInterval(this.imageInterval)

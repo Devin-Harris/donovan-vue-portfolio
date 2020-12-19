@@ -8,7 +8,11 @@
     ></i>
     <div v-if="isLinksOpen">
       <div class="link-container" v-for="link in links" :key="link.name">
-        <h2 class="link-container__link" @click.stop="linkClick(link)">
+        <h2
+          class="link-container__link"
+          :class="{ active: link.isActive }"
+          @click.stop="linkClick(link)"
+        >
           <span v-if="link.isActive">//</span>
           <i v-else class="fas fa-plus"></i>
           {{ link.name }}
@@ -16,6 +20,7 @@
         <div v-if="link.subLinksOpen">
           <h2
             class="link-container__sub-link"
+            :class="{ active: subLink.isActive }"
             v-for="subLink in link.subLinks"
             :key="subLink.name"
             @click.stop="subLinkClick(subLink)"
