@@ -8,7 +8,8 @@ export default {
     return {
       activeImageIndex: 0,
       imageInterval: null,
-      changingImage: false
+      changingImage: false,
+      sliderSpeed: 4000
     }
   },
   computed: {
@@ -16,7 +17,7 @@ export default {
       return require(`../../assets/images/${this.imageBaseSrc}/${this.images[this.activeImageIndex]}`)
     }
   },
-  created() {
+  mounted() {
     this.setImageInterval()
   },
   destroyed() {
@@ -24,24 +25,16 @@ export default {
   },
   methods: {
     setImageInterval() {
-      this.loadNewImage()
       this.imageInterval = setInterval(() => {
         this.loadNewImage()
-      }, 4000)
+      }, this.sliderSpeed)
     },
     getImageSrc(image) {
       return require(`../../assets/images/${this.imageBaseSrc}/${image}`)
     },
     loadNewImage() {
-      // setTimeout(() => {
-      //   document.querySelector('.image-slider-container').style.opacity = 1
-      // }, 150)
       this.activeImageIndex += 1
       if (this.activeImageIndex >= this.images.length) this.activeImageIndex = 0
-
-      // setTimeout(() => {
-      //   document.querySelector('.image-slider-container').style.opacity = 0
-      // }, 3850)
     },
     prevImage() {
       clearInterval(this.imageInterval)

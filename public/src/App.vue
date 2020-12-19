@@ -40,7 +40,7 @@ html {
 
 .content {
   display: grid;
-  grid-template-columns: max-content auto;
+  grid-template-columns: 30vw auto;
   justify-items: center;
 }
 </style>

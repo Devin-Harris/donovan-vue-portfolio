@@ -7,16 +7,16 @@
           class="image-item"
           :style="{ backgroundImage: `url(${getImageSrc(image)})` }"
         >
-          <!-- <div class="arrows">
-          <div class="left-click">
-            <i class="fas fa-chevron-left" @click="prevImage"></i>
-          </div>
-          <div class="right-click">
-            <i class="fas fa-chevron-right" @click="nextImage"></i>
-          </div>
-        </div> -->
         </div>
       </transition>
+    </div>
+    <div class="image-arrows">
+      <div class="left-click">
+        <i class="fas fa-chevron-left" @click="prevImage()"></i>
+      </div>
+      <div class="right-click">
+        <i class="fas fa-chevron-right" @click="nextImage()"></i>
+      </div>
     </div>
   </div>
 </template>

@@ -3,15 +3,13 @@ export default {
   data() {
     return {
       images: [],
-      imageCount: 100,
-      loaded: false
+      imageCount: 100
     }
   },
   created() {
     for (let i = 0; i <= this.imageCount; i++) {
       this.images.push('V' + i + '.jpg')
     }
-    this.loaded = true
   },
   methods: {
     getImageSrc(imageName) {

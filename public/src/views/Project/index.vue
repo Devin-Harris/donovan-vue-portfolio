@@ -1,7 +1,7 @@
 <template>
   <div class="project-container">
     <div
-      v-if="$route.name === 'Photo' && loaded"
+      v-if="$route.name === 'Photo'"
       class="project-container__photo"
     >
       <div

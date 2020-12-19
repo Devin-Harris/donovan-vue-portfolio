@@ -62,7 +62,6 @@ export default {
     deactiveAllLinks() {
       this.links.map(l => l.subLinks.map(sl => { sl.isActive = false }))
       this.links.map(l => { l.isActive = false })
-      console.log(this.links)
     },
     subLinkClick(link) {
       this.deactiveAllLinks()
