@@ -5,5 +5,6 @@ module.exports = {
                 prependData: `@import "@/styles/_colors.scss";`
             }
         }
-    }
+    },
+    lintOnSave: false
 }

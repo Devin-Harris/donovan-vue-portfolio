@@ -5,61 +5,100 @@
   padding: 4rem;
   text-align: left;
   &-information {
+    padding-right: 5rem;
+    border-right: 1px solid white;
     position: fixed;
+    height: calc(100% - 8rem);
     left: 15vw;
     transform: translate(-50%);
-    .name-link {  
-      text-transform: uppercase;
-      cursor: pointer;
-      color: $light;
-      letter-spacing: .5rem;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-      width: max-content;
-    }
-    .hamburger {
-      margin-left: 2.5rem;
-      color: white;
-      font-size: 1.25rem;
-      transition: .3s;
-      cursor: pointer;
-  
-      &.open {
-        transform: rotate(45deg);
-        color: $accent;
-      }
-    }
-    .link-container {
-      margin: 1rem 0;
-      margin-left: 2.5rem;
-  
-      .active {
-        color: $accent;
-      }
-  
-      &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    &__top {
+      .name-link {  
+        text-transform: uppercase;
         cursor: pointer;
         color: $light;
-        margin-bottom: .5rem;
+        letter-spacing: .5rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        width: max-content;
       }
-      &__sub-link {
-        cursor: pointer;
-        padding-left: 1rem;
-        color: $light;
-      }
-      &__link, &__sub-link {
+      .hamburger {
+        margin-left: 2.5rem;
+        color: white;
+        font-size: 1.25rem;
         transition: .3s;
         cursor: pointer;
-        width: max-content;
-        i {
-          transition: .3s;
-          font-size: 1rem;
+    
+        &.open {
+          transform: rotate(45deg);
+          color: $accent;
         }
-        &:hover {
-          opacity: .5;
+      }
+      .link-container {
+        margin: 1rem 0;
+        margin-left: 2.5rem;
+    
+        .active {
+          color: $accent;
+        }
+    
+        &__link {
+          cursor: pointer;
+          color: $light;
+          margin-bottom: .5rem;
+        }
+        &__sub-link {
+          cursor: pointer;
+          padding-left: 1rem;
+          color: $light;
+        }
+        &__link, &__sub-link {
+          transition: .3s;
+          cursor: pointer;
+          width: max-content;
           i {
-            transform: rotate(45deg);
+            transition: .3s;
+            font-size: 1rem;
           }
+          &:hover {
+            opacity: .5;
+            i {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      color: white;
+      .media-links {
+        margin: .5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .media-link-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 1rem;
+          transition: .3s;
+          i {
+            margin-right: .5rem;
+          }
+          &:hover {
+            opacity: .5;
+            cursor: pointer;
+          }
+        }
+      }
+      p {
+        font-family: Helvetica;
+        &.copyright {
+          letter-spacing: .25rem;
         }
       }
     }

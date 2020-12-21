@@ -22,8 +22,23 @@ const routes = [
     component: Contact
   },
   {
+    path: "/Store",
+    name: 'Store',
+    component: Contact //TODO
+  },
+  {
+    path: "/Design",
+    name: 'Design',
+    component: Project
+  },
+  {
     path: "/Photo",
     name: 'Photo',
+    component: Project
+  },
+  {
+    path: "/Film",
+    name: 'Film',
     component: Project
   }
 ]

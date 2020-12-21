@@ -6,7 +6,7 @@ export default {
         {
           name: 'Home',
           redirects: true,
-          isActive: true,
+          isActive: false,
           subLinks: [],
           subLinksOpen: false
         },
@@ -55,6 +55,16 @@ export default {
       isLinksOpen: true
     }
   },
+  created() {
+    const activeRoute = this.$route.name
+    this.links.map(l => { if (l.name === activeRoute || (l.name === 'Home' && !activeRoute)) l.isActive = true })
+    this.links.map(l => l.subLinks.map(sl => {
+      if (sl.name === activeRoute) {
+        sl.isActive = true
+        l.subLinksOpen = true
+      }
+    }))
+  },
   methods: {
     toggleLinks() {
       this.isLinksOpen = !this.isLinksOpen
@@ -87,6 +97,10 @@ export default {
       })
 
       if (link.redirects) this.$router.push(link.name)
+    },
+    mediaClick(media) {
+      if (media === 'youtube') window.open('https://www.youtube.com/channel/UCc-0PypcQVMUi3EL_zesGtg/videos')
+      else if (media === 'instagram') window.open('https://www.instagram.com/donovan_render/?hl=en')
     }
   }
 }
