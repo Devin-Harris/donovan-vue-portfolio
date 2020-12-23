@@ -2,6 +2,16 @@
   width: 100%;
   height: 100%;
   padding: 4rem 6rem;
+
+  .photo__title {
+    color: $accent;
+    margin: 0 auto 2rem auto;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
   &__photo {
     height: 100%;
     width: 100%;
@@ -78,6 +88,53 @@
     }
 
   }
+
+  &-design-container {
+    .design__title {
+      color: $accent;
+      margin: 0 auto 2rem auto;
+      letter-spacing: .5rem;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .links-container {
+      margin: 0 auto;
+      width: 60%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      padding-bottom: 2rem;
+      grid-row-gap: 1rem;
+      border-bottom: 1px solid white;
+
+      &__link {
+        color: white;
+        font-size: 1.5em;
+        transition: .3s;
+
+        i {
+          transition: .3s;
+        }
+
+        &.active {
+          color: $accent;
+        }
+
+        &:hover {
+          opacity: .5;
+          cursor: pointer;
+
+          i {
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+    } 
+  }
+
 }
 
 .fade-enter-active, .fade-leave-active {

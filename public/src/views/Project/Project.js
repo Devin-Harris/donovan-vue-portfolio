@@ -1,13 +1,28 @@
+import DesignProject from '@/components/design-project'
+
 export default {
   name: 'Project',
+  components: {
+    DesignProject
+  },
   data() {
     return {
       images: [],
       imageCount: 100,
-      selectedImage: null
+      selectedImage: null,
+      designProjects: [
+        'Five Spaces',
+        'Motion Form',
+        'Modular Wall',
+        '[L] Pool',
+        '[M] Pavilion',
+        '[S] Restroom'
+      ],
+      selectedDesignProject: null
     }
   },
   created() {
+    this.selectedDesignProject = this.designProjects[0]
     for (let i = 0; i <= this.imageCount; i++) {
       this.images.push('V' + i + '.jpg')
     }
@@ -47,6 +62,9 @@ export default {
       document.removeEventListener('click', this.clickOutsideCheck)
       document.querySelector('html').style.overflowY = 'overlay'
       this.selectedImage = null
+    },
+    selectProject(project) {
+      this.selectedDesignProject = project
     }
   }
 }
