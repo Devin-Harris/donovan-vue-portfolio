@@ -50,7 +50,7 @@
             <p>Instagram</p>
           </div>
         </div>
-        <p class="copyright">Copyright &copy; Donovan Staab 2020</p>
+        <p class="copyright">Copyright &copy; Donovan Staab {{getCurrentYear()}}</p>
       </div>
     </div>
   </div>

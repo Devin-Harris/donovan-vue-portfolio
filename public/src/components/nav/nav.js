@@ -101,6 +101,10 @@ export default {
     mediaClick(media) {
       if (media === 'youtube') window.open('https://www.youtube.com/channel/UCc-0PypcQVMUi3EL_zesGtg/videos')
       else if (media === 'instagram') window.open('https://www.instagram.com/donovan_render/?hl=en')
+    },
+    getCurrentYear() {
+      const date = new Date(Date.now())
+      return date.getFullYear()
     }
   }
 }
