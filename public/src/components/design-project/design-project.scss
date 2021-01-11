@@ -2,7 +2,7 @@
   width: 75%;
   margin: 0 auto;
 
-  .modular-wall-container {
+  .modular-wall-container, .pavilion-container {
     margin: 0 auto;
 
     .image-grid {
@@ -19,6 +19,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        cursor: pointer;
       }
     }
 

@@ -108,14 +108,18 @@
       padding-bottom: 2rem;
       grid-row-gap: 1rem;
       border-bottom: 1px solid white;
+      justify-items: center;
 
       &__link {
         color: white;
         font-size: 1.5em;
+        width: max-content;
         transition: .3s;
 
         i {
           transition: .3s;
+          font-size: 1rem;
+          vertical-align: middle;
         }
 
         &.active {

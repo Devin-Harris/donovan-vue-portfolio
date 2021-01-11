@@ -21,7 +21,6 @@
             <i class="fas fa-caret-right" @click="nextImageOverlay"></i>
             <i class="fas fa-times" @click="closeOverlay"></i>
           </div>
-          <!-- <div class="project-container__photo-modal" :style="{ backgroundImage: `url('${getImageSrc(selectedImage)}')` }"></div> -->
           <img class="project-container__photo-modal" :src="getImageSrc(selectedImage)" />
         </div>
       </transition>
